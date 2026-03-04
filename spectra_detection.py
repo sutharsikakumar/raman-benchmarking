@@ -407,6 +407,12 @@ def classify_spectrum(json_path: str) -> dict:
         print(raw_text)
         return {"raw_response": raw_text}
 
+    result = {
+        "spectrum_id": spectrum_id,
+        "source_file": os.path.basename(json_path),
+        **result,
+    }
+
     return result
 
 
