@@ -1,0 +1,33 @@
+{
+  "model": "claude-opus-4-5-20251101",
+  "spectrum_id": "24ee83fc8aa7dc29",
+  "source_file": "sample_1_classification.json",
+  "material": "Graphene on silicon substrate",
+  "confidence": 0.92,
+  "eliminated_candidates": {
+    "MoS2": {
+      "reason": "MoS2 exhibits characteristic E2g and A1g modes at ~383 and ~408 cm⁻¹ respectively. The spectrum shows a broad feature at 300.8 cm⁻¹ but lacks the distinctive doublet in the 380-410 cm⁻¹ range."
+    },
+    "WS2": {
+      "reason": "WS2 shows E2g at ~356 cm⁻¹ and A1g at ~421 cm⁻¹. No peaks matching these positions are present."
+    },
+    "Bulk graphite": {
+      "reason": "The 2D band at 2670.2 cm⁻¹ has FWHM of 32.19 cm⁻¹, which is narrower than typical bulk graphite (>50 cm⁻¹), and the I(2D)/I(G) ratio of ~1.6 (4.41/2.70) is higher than graphite (~0.3-0.5)."
+    },
+    "Amorphous carbon": {
+      "reason": "The G band at 1579.9 cm⁻¹ is sharp (FWHM 16.97 cm⁻¹) rather than broad. The D band at 1341.9 cm⁻¹ has very low intensity (rel_height 0.11) compared to G, inconsistent with amorphous carbon which shows intense, broad D band."
+    }
+  },
+  "key_evidence": [
+    "Dominant peak at 519.9 cm⁻¹ with rel_height 25.87 and FWHM 17.08 cm⁻¹ matches crystalline silicon substrate (expected ~520 cm⁻¹)",
+    "Strong 2D band at 2670.2 cm⁻¹ with FWHM 32.19 cm⁻¹ - narrow width indicates few-layer graphene",
+    "G band at 1579.9 cm⁻¹ with FWHM 16.97 cm⁻¹ - sharp and consistent with sp² carbon",
+    "I(2D)/I(G) intensity ratio of 1.64 (4.41/2.70) suggests monolayer to few-layer graphene",
+    "Very weak D band at 1341.9 cm⁻¹ with rel_height 0.11 indicates high crystalline quality with minimal defects",
+    "I(D)/I(G) ratio of ~0.04 confirms low defect density",
+    "Secondary Si peak at 971.8 cm⁻¹ (rel_height 3.32) corresponds to second-order Si phonon mode",
+    "Region fractions show 49.7% intensity in 500-900 cm⁻¹ (Si-dominated) and 8.4% in 2650-2750 cm⁻¹ (2D band region)",
+    "Peak at 2450.8 cm⁻¹ consistent with D+D'' combination mode in graphene"
+  ],
+  "reasoning": "**Stage 1 - Dominant Features:** The spectrum is dominated by a massive peak at 519.9 cm⁻¹ with relative height 25.87, which is by far the strongest feature. This matches the well-known first-order optical phonon of crystalline silicon at ~520 cm⁻¹. The narrow FWHM of 17.08 cm⁻¹ confirms high-quality crystalline Si. The second strongest peak is at 2670.2 cm⁻¹ (rel_height 4.41), followed by 971.8 cm⁻¹ (rel_height 3.32) and 1579.9 cm⁻¹ (rel_height 2.70). The 971.8 cm⁻¹ peak is the second-order Si phonon mode.\n\n**Stage 2 - Secondary Features:** The peaks at 1579.9 cm⁻¹ and 2670.2 cm⁻¹ are diagnostic of graphitic carbon. The G band at 1579.9 cm⁻¹ (FWHM 16.97 cm⁻¹) arises from sp² carbon stretching. The 2D band at 2670.2 cm⁻¹ is the double-resonance two-phonon mode. Critically, the D band at 1341.9 cm⁻¹ is extremely weak (rel_height 0.11 vs G band 2.70), indicating very low defect density. The peak at 618.1 cm⁻¹ may be a weak Si-related feature. A small peak at 2450.8 cm⁻¹ corresponds to the D+D'' combination mode seen in graphene.\n\n**Stage 3 - Spectral Weight Distribution:** The region_fractions confirm: 500-900 cm⁻¹ contains 49.7% of intensity (dominated by Si), 2650-2750 cm⁻¹ has 8.4% (2D band), 1550-1620 cm⁻¹ has 3.7% (G band), and 1300-1400 cm⁻¹ has only 0.4% (minimal D band). This distribution is consistent with graphene on Si where the substrate dominates but carbon signals are clearly present.\n\n**Stage 4 - Candidate Evaluation:** The I(2D)/I(G) ratio of ~1.64 strongly suggests monolayer to few-layer graphene rather than bulk graphite (which shows ratio ~0.3-0.5). The 2D band FWHM of 32.19 cm⁻¹ is narrower than bulk graphite and consistent with few-layer graphene. The extremely low D/G ratio (~0.04) indicates high crystalline quality. TMDs are excluded due to absence of their characteristic mode pairs. The 300.8 cm⁻¹ feature is too broad and mispositioned for TMD assignment.\n\n**Stage 5 - Decision:** The evidence unambiguously points to high-quality graphene (likely monolayer to few-layer based on 2D band characteristics) deposited on a crystalline silicon substrate. The Si peak dominance simply reflects the penetration depth and substrate contribution, while the carbon fingerprint is definitively graphene."
+}

@@ -1,0 +1,28 @@
+{
+  "model": "claude-opus-4-6",
+  "spectrum_id": "24ee83fc8aa7dc29",
+  "source_file": "sample_1_classification.json",
+  "material": "Graphene on Silicon substrate",
+  "confidence": 0.92,
+  "eliminated_candidates": {
+    "Bare Silicon (no overlayer)": "If this were bare Si, we would only see the ~520 cm⁻¹ peak and its overtones. The strong G band at 1579.9 cm⁻¹ and 2D band at 2670.2 cm⁻¹ rule out bare Si.",
+    "MoS2 on Si": "MoS2 would show E₂g and A₁g modes near 383 and 408 cm⁻¹ with a characteristic separation of ~25 cm⁻¹. No such doublet is observed in the 300-500 cm⁻¹ region. The 300.8 cm⁻¹ peak is likely a Si second-order feature.",
+    "Graphite": "In graphite, the 2D band is typically asymmetric and broader (FWHM > 50 cm⁻¹) and often shows a shoulder. Here the 2D band at 2670.2 cm⁻¹ has FWHM of 32.19 cm⁻¹, which is consistent with monolayer or few-layer graphene rather than bulk graphite.",
+    "Diamond": "Diamond has a sharp peak at ~1332 cm⁻¹. The broad feature at 1341.9 cm⁻¹ with FWHM 144.14 cm⁻¹ is far too broad for diamond and is consistent with a weak, disorder-induced D band in graphene.",
+    "Carbon nanotubes": "CNTs would show RBM modes below 300 cm⁻¹ with sharp peaks, and typically a different G-band profile (G⁺/G⁻ splitting). No clear RBM modes are observed.",
+    "WS2 or WSe2": "WS2 would show prominent modes near 350 and 420 cm⁻¹; WSe2 near 250 cm⁻¹. Neither pattern matches the observed spectrum."
+  },
+  "key_evidence": [
+    "Dominant peak at 519.9 cm⁻¹ (rel_height 25.87, FWHM 17.08 cm⁻¹) is the first-order Si optical phonon, confirming a Si substrate.",
+    "Peak at 971.8 cm⁻¹ (rel_height 3.32, FWHM 41.1 cm⁻¹) corresponds to the Si second-order overtone (~2×520 = 1040 cm⁻¹, but commonly observed near 960-970 cm⁻¹ as a two-phonon feature).",
+    "Peak at 300.8 cm⁻¹ (rel_height 2.16) is consistent with Si second-order acoustic phonon features.",
+    "G band at 1579.9 cm⁻¹ (rel_height 2.70, FWHM 16.97 cm⁻¹) is characteristic of sp² carbon (graphene). The narrow FWHM and position near 1580 cm⁻¹ are textbook graphene G band values.",
+    "2D band at 2670.2 cm⁻¹ (rel_height 4.41, FWHM 32.19 cm⁻¹) is the graphene 2D (or G') band. The 2D/G intensity ratio is ~4.41/2.70 ≈ 1.63, which is >1, strongly suggesting monolayer graphene.",
+    "The FWHM of the 2D band (32.19 cm⁻¹) is narrow and consistent with monolayer graphene (typically ~25-35 cm⁻¹), as opposed to bilayer (>40 cm⁻¹) or graphite (>50 cm⁻¹).",
+    "Weak D band at 1341.9 cm⁻¹ (rel_height 0.11, FWHM 144.14 cm⁻¹) indicates minimal disorder; the very low D/G ratio (~0.11/2.70 ≈ 0.04) suggests high-quality graphene.",
+    "Region fractions: 500-900 cm⁻¹ dominates at 49.7% (Si peak region), 2650-2750 at 8.4% (2D band), 1550-1620 at 3.7% (G band), consistent with graphene on Si.",
+    "Peak at 2450.8 cm⁻¹ (rel_height 0.28) is consistent with the D+D'' combination band in graphene.",
+    "Peak at 618.1 cm⁻¹ (rel_height 1.61) sits on the shoulder of the Si peak and may be a Si-related feature or substrate artifact."
+  ],
+  "reasoning": "**Stage 1 – Dominant Features:** The five highest-prominence peaks are at 519.9 cm⁻¹ (prom 25.87), 2670.2 cm⁻¹ (prom 4.41), 971.8 cm⁻¹ (prom 3.32), 1579.9 cm⁻¹ (prom 2.70), and 300.8 cm⁻¹ (prom 1.37). The 519.9 cm⁻¹ peak with FWHM ~17 cm⁻¹ is unmistakably the Si first-order Raman mode. The 971.8 cm⁻¹ peak is a known Si two-phonon feature. The 300.8 cm⁻¹ peak is also a Si multi-phonon feature. The peaks at 1579.9 cm⁻¹ and 2670.2 cm⁻¹ are the hallmark G and 2D bands of graphene.\n\n**Stage 2 – Secondary Features:** The weak, very broad feature at 1341.9 cm⁻¹ (FWHM 144 cm⁻¹, rel_height 0.11) corresponds to the D band of graphene, indicating minimal defects. The D/G intensity ratio is extremely low (~0.04), suggesting high crystalline quality. A peak at 2450.8 cm⁻¹ is likely the D+D'' combination mode. The peak at 818.4 cm⁻¹ may be another Si multi-phonon feature. The numerous weak peaks above 3000 cm⁻¹ extending to 6000 cm⁻¹ are likely higher-order overtones or luminescence artifacts from the measurement system, and do not correspond to primary Raman features of common materials.\n\n**Stage 3 – Spectral Weight Distribution:** The region_fractions show 49.7% in 500-900 cm⁻¹ (dominated by Si), 8.4% in 2650-2750 cm⁻¹ (2D band), 7.2% in 300-500 cm⁻¹ (Si multi-phonon + possible artifacts), 3.7% in 1550-1620 cm⁻¹ (G band), and only 0.4% in 1300-1400 cm⁻¹ (weak D band). This distribution is fully consistent with graphene on a Si substrate where the substrate signal dominates due to the thin nature of the graphene layer.\n\n**Stage 4 – Candidate Evaluation:** (1) Monolayer graphene on Si: The 2D/G ratio >1.6 and narrow 2D FWHM (~32 cm⁻¹) are classic monolayer indicators. The G band at 1580 cm⁻¹ with FWHM ~17 cm⁻¹ is expected. The very weak D band indicates high quality. All Si features match. This is an excellent fit. (2) Bilayer/few-layer graphene on Si: Would typically show 2D/G < 1 and broader 2D band (>40 cm⁻¹). The observed 2D/G ~1.6 and FWHM 32 cm⁻¹ favor monolayer. (3) TMDs on Si: No characteristic TMD modes observed. (4) Amorphous carbon on Si: Would show much broader G and D bands; D/G ratio would be much higher. Ruled out.\n\n**Stage 5 – Decision:** The spectrum is best identified as monolayer graphene on a silicon substrate. The narrow, intense 2D band with 2D/G > 1, narrow G band at 1580 cm⁻¹, negligible D band, and dominant Si substrate peak all converge on this identification with high confidence."
+}
