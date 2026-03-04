@@ -1,20 +1,20 @@
 {
-  "spectrum_id": "62048ea1f0f75230",
-  "source_file": "sample_2.json",
-  "material": "hBN",
-  "confidence": 0.72,
+  "spectrum_id": "235a421157b61600",
+  "source_file": "sample_3.json",
+  "material": "MoS2",
+  "confidence": 0.9,
   "eliminated_candidates": {
-    "Graphene": "2D band window (2620\u20132780 cm\u207b\u00b9) is outside scan range; G band is only weak (4.5%); without 2D band confirmation, graphene cannot be identified. The strong peak at 1369 cm\u207b\u00b9 is more consistent with hBN E\u2082g than graphene D band, especially given no G band presence.",
-    "hBN": "Not eliminated \u2014 strong peak at 1369 cm\u207b\u00b9 (100% of diagnostic_max) falls squarely in the hBN E\u2082g window (1355\u20131380 cm\u207b\u00b9); no competing strong peaks from MoS\u2082, WSe\u2082, or graphene 2D band to rule it out.",
-    "MoS2": "MoS\u2082 diagnostic windows (~383 and ~408 cm\u207b\u00b9) are outside the scan range; cannot confirm. No strong peaks in available range consistent with MoS\u2082.",
-    "WSe2": "WSe\u2082 diagnostic windows (~252 cm\u207b\u00b9) are outside the scan range; cannot confirm. No evidence of WSe\u2082 features in available range.",
-    "Ti3C2Tx": "TMC broad envelope window is outside scan range. The sharp, strong peak at 1369 cm\u207b\u00b9 (peak/mean ratio would be high) is inconsistent with the broad, featureless TMC spectrum expected. Sharp crystalline peak argues against TMC."
+    "Graphene": "G band (~1580 cm\u207b\u00b9) and 2D band (~2650\u20132700 cm\u207b\u00b9) are outside the scan range (100\u20131498 cm\u207b\u00b9); cannot confirm graphene without both diagnostic peaks.",
+    "hBN": "hBN E\u2082g window shows only 0.2% signal at 1366 cm\u207b\u00b9 (weak); no strong hBN peak present. Additionally, STRONG peaks at ~380 and ~406 cm\u207b\u00b9 rule out hBN.",
+    "MoS2": "Not eliminated \u2014 STRONG E\u00b2\u2081g peak at 380 cm\u207b\u00b9 (100%) and STRONG A\u2081g peak at 406 cm\u207b\u00b9 (35.4%) are both present with ~26 cm\u207b\u00b9 separation, fully consistent with MoS\u2082.",
+    "WSe2": "WSe\u2082 A\u2081g/E\u00b2\u2081g window at ~242 cm\u207b\u00b9 shows only 0.4% (weak); absence of any signal in 238\u2013272 cm\u207b\u00b9 window rules out WSe\u2082. Also, STRONG peaks at ~380 and ~406 cm\u207b\u00b9 exceed the WSe\u2082 primary peak and rule out WSe\u2082.",
+    "Ti3C2Tx": "Peak/mean ratio of 58.5 far exceeds the threshold of 5, indicating a sharp crystalline peak is present. STRONG signal at ~380 cm\u207b\u00b9 in the MoS\u2082 E\u00b2\u2081g window rules out Ti\u2083C\u2082T\u2093."
   },
   "key_evidence": [
-    "Strong peak at 1369.0 cm\u207b\u00b9 (100% of diagnostic_max) falls within hBN E\u2082g window (1355\u20131380 cm\u207b\u00b9)",
-    "Graphene G band is only weak (4.5% at 1552 cm\u207b\u00b9) and 2D band is outside scan range, preventing graphene identification",
-    "No other competing strong peaks present in the available scan range (1200\u20131600 cm\u207b\u00b9)",
-    "Scan range is limited (1200\u20131600 cm\u207b\u00b9), so MoS\u2082, WSe\u2082, and TMC primary diagnostic windows cannot be assessed, but hBN has its primary peak within range"
+    "MoS\u2082 E\u00b2\u2081g / E\u2032 in-plane mode at 380 cm\u207b\u00b9: 100% of diagnostic_max (STRONG)",
+    "MoS\u2082 A\u2081g / A\u2081\u2032 out-of-plane mode at 406 cm\u207b\u00b9: 35.4% of diagnostic_max (STRONG)",
+    "Peak separation of ~26 cm\u207b\u00b9 between E\u00b2\u2081g and A\u2081g is within the expected 18\u201325 cm\u207b\u00b9 range for MoS\u2082 (slightly above, consistent with bulk or few-layer)",
+    "All other candidate primary windows show weak or absent signals (<8%)"
   ],
-  "reasoning": "The spectrum shows a single dominant sharp peak at 1369 cm\u207b\u00b9 (100% of diagnostic_max) that aligns precisely with the hBN E\u2082g mode (~1366 cm\u207b\u00b9). The scan range of 1200\u20131600 cm\u207b\u00b9 covers the hBN diagnostic window fully. Graphene is disfavored because the G band is only weak (4.5%) and the essential 2D band window is outside the scan range, so co-presence of G and 2D cannot be confirmed. Ti\u2083C\u2082T\u2093 is ruled out by the sharp, dominant crystalline peak. MoS\u2082 and WSe\u2082 cannot be confirmed as their primary diagnostic windows lie outside the scan range, but neither produces a dominant single peak near 1369 cm\u207b\u00b9. The sharp, strong, isolated peak at ~1369 cm\u207b\u00b9 is the hallmark signature of hBN, giving moderate-to-high confidence despite the limited scan range."
+  "reasoning": "The spectrum is dominated by two STRONG peaks at 380 cm\u207b\u00b9 and 406 cm\u207b\u00b9, corresponding to the MoS\u2082 E\u00b2\u2081g (in-plane) and A\u2081g (out-of-plane) modes with a separation of ~26 cm\u207b\u00b9, which is characteristic of few-layer or bulk MoS\u2082. No other candidate material produces both of these peaks simultaneously: WSe\u2082 lacks any signal in its 238\u2013272 cm\u207b\u00b9 primary window, hBN and graphene show no relevant signals, and the TMC flatness criterion is decisively violated by the sharp crystalline peaks. The scan range (100\u20131498 cm\u207b\u00b9) excludes the graphene G and 2D windows, but the presence of the two MoS\u2082 characteristic peaks with correct positions and separation provides high confidence in the MoS\u2082 classification."
 }
